@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count the digits of number</h1>
+    
+        <label >Num1</label>
+        <input type="text" id="num1"><br><br>
+        <label>Num2</label>
+        <input type="text" id="num2"><br><br>
+        
+        <button onclick="cel()">click here</button>
+        <p id="result"></p>
+        <p id="r1"></p>
+    
+    <script>
+        function gcd(a,b){
+            while(b === 0){
+                return a;
+            }
+            return gcd(b, a % b);
+        }
+
+        function cel(){
+            let a=parseInt(document.getElementById("num1").value);
+            let b=parseInt(document.getElementById("num2").value);
+            let ans= (a * b)/gcd(a,b);
+            document.getElementById("result").innerHTML="The lcm of "+a + " and "+b+" is "+ans;
+        }
+        
+    </script>
+    
+</body>
+</html>

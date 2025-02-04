@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count the digits of number</h1>
+    
+        <label >Num1</label>
+        <input type="text" id="a1"><br><br>
+        <button onclick="cel()">click here</button>
+        <p id="result"></p>
+        <p id="r1"></p>
+    
+    <script>
+        function pangram(a){
+
+            ar=a.toLowerCase();
+            alpha="abcdefghijklmnopqrstuvwxyz ";
+
+            for(let ch of ar){
+                if(!alpha.includes(ch)){
+                    return "❌ it is not a pangram";
+                }
+            }
+            return "✅ it is a pangram";
+        }
+        function cel(){
+            let r=document.getElementById("a1").value;
+            let a=pangram(r);
+            document.getElementById("result").innerHTML=a;
+
+            
+        }
+    </script>
+    
+</body>
+</html>

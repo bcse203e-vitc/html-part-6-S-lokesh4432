@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find the First Non-Repeating Character in a String</h1>
+        <label >str1</label>
+        <input type="text" id="a1"><br><br>
+        <button onclick="dtb()">click here</button><br><br>
+        <p id="result"></p>
+        <p id="r1"></p>
+    <script>
+        let str = document.getElementById("inputString").value; 
+            let charCount = {}; 
+            for (let char of str) {
+                if (charCount[char]) {
+                    charCount[char] += 1; 
+                } else {
+                    charCount[char] = 1;
+                }
+            }
+            document.getElementById("result").textContent = JSON.stringify(charCount);
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count the digits of number</h1>
+    
+        <label >Num1</label>
+        <input type="text" id="str1"><br><br>
+        <button onclick="cel()">click here</button>
+        <p id="result"></p>
+        <p id="r1"></p>
+    
+    <script>
+        function cel(){
+            let str=document.getElementById("str1").value;
+            let vowels=['a','e','i','o','u'];
+            let vc=0;
+            let cc=0;
+            let vl=[];
+
+            str2=str.toLowerCase();
+
+            for(let ch of str){
+                if(vowels.includes(ch)){
+                    vc++;
+                    vl.push(ch);
+                }
+                else{
+                    cc++;
+                }
+            }
+            document.getElementById("result").innerHTML=`Vowels : ${vc} (${vl.join(",")})`;
+            document.getElementById("r1").innerHTML=`Consonents : ${cc}`;
+            
+        }
+        
+
+    
+        
+    </script>
+    
+</body>
+</html>

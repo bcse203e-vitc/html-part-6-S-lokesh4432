@@ -6,24 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Enter numbers to swap</h1>
+    <h1>Reversing a number </h1>
     
         <label >Num1</label>
         <input type="text" id="num1"><br><br>
         
-        <button onclick="reverse()" >click here</button>
+        <button onclick="palindrome()" >click here</button>
+        <p id="r1"></p>
         <p id="result"></p>
     
     <script>
-        function reverse(){
+        function palindrome(){
             let a=parseInt(document.getElementById("num1").value);
             let b=0;
-            
+            let num=a;
             while(a > 0){
                 b=(a % 10) +  b * 10;
                 a=Math.floor(a / 10);
             }
-            document.getElementById("result").innerHTML="The Reversed Number is "+b;
+
+            document.getElementById("r1").innerHTML="The Reversed Number is "+b;
+            if(num === b){
+                document.getElementById("result").innerHTML="This given number is a palindrome number";
+            }
+            else{
+                document.getElementById("result").innerHTML="This given number is not a palindrome number";
+            }
         }
     </script>
     

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter numbers to swap</h1>
+    
+        <label >Num1</label>
+        <input type="text" id="num1"><br><br>
+        <label>Num2</label>
+        <input type="text" id="num2"><br><br>
+        <label>Num3</label>
+        <input type="text" id="num3"><br><br>
+        <button onclick="large()" >click here</button>
+        <p id="result"></p>
+    
+    <script>
+        function swap(){
+            let a=parseInt(document.getElementById("num1").value);
+            let b=parseInt(document.getElementById("num2").value);
+            let c=parseInt(document.getElementById("num3").value);
+            if(a > b && a > c){
+                document.getElementById("result").innerHTML=a+"is the largest number";
+            }
+            else if(b > c && b > a ){
+                document.getElementById("result").innerHTML=b+"is the largest number";
+            }
+            else{
+                document.getElementById("result").innerHTML=c +"is the largest number";
+            }
+        }
+    </script>
+    
+</body>
+</html>

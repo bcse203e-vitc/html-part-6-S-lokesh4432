@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count the digits of number</h1>
+    
+        <label >Num1</label>
+        <input type="text" id="a1"><br><br>
+        <button onclick="cel()">click here</button>
+        <p id="result"></p>
+        <p id="r1"></p>
+    <script>
+        function arr(a){
+            let n=a.length+1;
+            let esum=(n * (n + 1))/2;
+            let asum=0;
+            for(let i = 0;i < a.length ;i++){
+                asum+= a[i];
+            }
+            return esum-asum;    
+        }
+        function cel(){
+            let r=document.getElementById("a1").value;
+            let a=r.split(',').map(Number);
+            let ans=arr(a);
+            document.getElementById("result").innerHTML=ans;
+        }
+    </script>
+    
+</body>
+</html>

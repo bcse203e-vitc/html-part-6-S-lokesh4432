@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sort an Array Without Using .sort()</h1>
+        <label >Num1(decimal to binary)</label>
+        <input type="text" id="a1"><br><br>
+        <button onclick="dtb()">click here</button><br><br>
+        <label >Num2(binary to decimal)</label>
+        <input type="text" id="a2"><br><br>
+        <button onclick="cel()">click here</button>
+        <p id="result"></p>
+        <p id="r1"></p>
+    <script>
+        function dtb(){
+            let a=document.getElementById("a1").value;
+            let re=(parseInt(a,10)).toString(2);
+            document.getElementById("result").textContent=re;
+        }
+        function cel(){
+            let a=document.getElementById("a2").value;
+            let re=(parseInt(a,2));
+            document.getElementById("r1").textContent=re;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sort an Array Without Using .sort()</h1>
+        <label >Num1</label>
+        <input type="text" id="a1"><br><br>
+        <button onclick="cel()">click here</button>
+        <p id="result"></p>
+        <p id="r1"></p>
+    <script>
+        function arr(a){
+            let b=[...a];
+            for(let i=0;i<a.length-1 ;i++){
+                for(let j=0;j<a.length-i-1;j++){
+                    if(a[j]>a[j+1]){
+                        let t=a[j];
+                        a[j]=a[j+1];
+                        a[j+1]=t;
+                    }
+                }
+            } 
+            for(let i=0;i<b.length-1 ;i++){
+                for(let j=0;j<b.length-i-1;j++){
+                    if(b[j]<b[j+1]){
+                        let t=b[j];
+                        b[j]=b[j+1];
+                        b[j+1]=t;
+                    }
+                }
+            }  
+            return [a,b]; 
+        }
+        function cel(){
+            let r=document.getElementById("a1").value;
+            let a=r.split(',').map(Number);
+            let [asc,des]=arr(a);
+            document.getElementById("result").textContent="Ascending Order: "+asc.join(',');
+            document.getElementById("r1").textContent="Descending Order: "+des.join(',');
+        }
+    </script>
+    
+</body>
+</html>

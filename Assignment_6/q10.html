@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count the digits of number</h1>
+    
+        <label >Num1</label>
+        <input type="text" id="num1"><br><br>
+        <button onclick="cel()">click here</button>
+        <p id="result"></p>
+        <p id="r1"></p>
+    
+    <script>
+        function arm(a){
+            let b=0;
+            let c=temp=a;
+            while(a>0){
+                a=a/10;
+                b++;
+            }
+            let sum=0;
+            while(temp>0){
+                sum+=Math.pow(temp%10,b);
+                temp=temp/10;
+            }
+            return sum;
+        }
+        function cel(){
+            let a=parseInt(document.getElementById("num1").value);
+            let arms=arm(a);
+            if(a === arms){
+                document.getElementById("result").innerHTML=a +" is a armstrong number";
+
+            }
+            else{
+                document.getElementById("result").innerHTML=a +" is not a armstrong number";
+            }
+        }
+
+    
+        
+    </script>
+    
+</body>
+</html>

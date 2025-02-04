@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter numbers to swap</h1>
+    
+        <label >Num1</label>
+        <input type="text" id="num1"><br><br>
+        
+        <button onclick="evenorodd()" >click here</button>
+        <p id="result"></p>
+    
+    <script>
+        function evenorodd(){
+            let a=parseInt(document.getElementById("num1").value);
+            if( a % 2 == 0){
+                document.getElementById("result").innerHTML=a+ " is even number";
+            }
+            else{
+                document.getElementById("result").innerHTML=a+ " is odd number";
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Sequence</title>
+</head>
+<body>
+
+    <h2>Generate Fibonacci Sequence</h2>
+    <label for="num">Enter N:</label>
+    <input type="number" id="num" min="1" value="7">
+    <button onclick="generateFibonacci()">Generate</button>
+
+    <h3>Result:</h3>
+    <p id="result"></p>
+
+    <script>
+        function fibonacciIterative(n) {
+            let fib = [0, 1];
+            for (let i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            return fib.slice(0, n);
+        }
+
+        function generateFibonacci() {
+            let n = parseInt(document.getElementById("num").value);
+            if (n <= 0 || isNaN(n)) {
+                document.getElementById("result").innerText = "Please enter a valid positive number.";
+                return;
+            }
+
+            document.getElementById("result").innerText = fibonacciIterative(n).join(", ");
+        }
+    </script>
+
+</body>
+</html>

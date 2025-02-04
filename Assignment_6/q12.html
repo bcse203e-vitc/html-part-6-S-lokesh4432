@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count the digits of number</h1>
+    
+        <label >Num1</label>
+        <input type="text" id="a1"><br><br>
+        <button onclick="cel()">click here</button>
+        <p id="result"></p>
+        <p id="r1"></p>
+    
+    <script>
+        function arr(a){
+            let uni= [];
+            for(let i=0;i<a.length;i++){
+                if(uni.indexOf(a[i])=== -1){
+                    uni.push(a[i]);
+                }
+            }
+            return uni;
+        }
+        function cel(){
+            let inp = document.getElementById("a1").value;
+            let a=inp.split(',').map(Number);
+            let uni=arr(a);
+
+            document.getElementById("result").textContent= uni.join(',');   
+        }   
+    </script>
+</body>
+</html>
